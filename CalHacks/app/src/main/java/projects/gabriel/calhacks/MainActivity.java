@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
                 firstTextView.setText("You Clicked");
             }
         });*/
-        //startActivity(new Intent(getApplicationContext(), continue_button.class));
+
 
     }
     public void buttonOnClick(View v){

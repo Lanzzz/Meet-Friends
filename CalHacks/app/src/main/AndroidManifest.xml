@@ -23,6 +23,11 @@
             android:label="@string/title_activity_2"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+        <activity
+            android:name=".OptionSlide"
+            android:label="@string/title_activity_option_slide"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>
