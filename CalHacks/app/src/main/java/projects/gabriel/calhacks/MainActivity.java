@@ -24,9 +24,9 @@ public class MainActivity extends AppCompatActivity {
 
         final Button firstButton = (Button) findViewById(R.id.button);
 
-        firstButton.setOnClickListener(new View.OnClickListener(){
+        firstButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view){
+            public void onClick(View view) {
                 firstTextView.setText("You Clicked");
             }
         });
