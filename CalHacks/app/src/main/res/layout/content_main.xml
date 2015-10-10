@@ -34,5 +34,5 @@
         android:layout_alignLeft="@+id/editText"
         android:layout_alignStart="@+id/editText"
         android:clickable="true"
-        android:onClick="buttonOnClick()" />
+        android:onClick="buttonOnClick" />
 </RelativeLayout>
