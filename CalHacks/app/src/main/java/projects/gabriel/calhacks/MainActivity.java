@@ -1,5 +1,6 @@
 package projects.gabriel.calhacks;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -20,16 +21,18 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        final TextView firstTextView = (TextView) findViewById(R.id.textView);
+        //final TextView firstTextView = (TextView) findViewById(R.id.textView);
 
         final Button firstButton = (Button) findViewById(R.id.button);
-
+        /*
         firstButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 firstTextView.setText("You Clicked");
             }
-        });
+        });*/
+        startActivity(new Intent(getApplicationContext(), continue_button.class));
+
     }
 
     @Override

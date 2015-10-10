@@ -2,5 +2,6 @@
     <string name="app_name">Cal Hacks</string>
     <string name="action_settings">Settings</string>
     <string name="continue_button">Continue</string>
+    <string name="success">You are Successful</string>
 
 </resources>
