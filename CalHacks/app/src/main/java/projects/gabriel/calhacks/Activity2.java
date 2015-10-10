@@ -14,7 +14,7 @@ public class Activity2 extends AppCompatActivity implements View.OnClickListener
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_2);
-        button = (Button)findViewById(R.id.correct_button);
+        button = (Button)findViewById(R.id.correct_button); // weird
         button.setOnClickListener(this);
     }
 
