@@ -18,8 +18,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //setSupportActionBar(toolbar);
 
         /*final TextView firstTextView = (TextView) findViewById(R.id.textView);
 
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     public void buttonOnClick(View v){
 
         final Button firstButton = (Button) findViewById(R.id.button);
-        startActivity(new Intent(getApplicationContext(), continue_button.class));
+        startActivity(new Intent(getApplicationContext(), Activity2.class));
     }
 
     @Override
