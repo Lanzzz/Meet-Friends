@@ -22,11 +22,6 @@
             android:name=".Activity2"
             android:label="@string/title_activity_2"
             android:theme="@style/AppTheme.NoActionBar" >
-            <intent-filter>
-            <action android:name="projects.gabriel.calhacks.Activity2" />
-
-            <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
         </activity>
     </application>
 
