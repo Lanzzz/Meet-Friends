@@ -13,22 +13,38 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 
+
 public class MainActivity extends Activity {
     Intent clickedDay;
+    Button button = new Button(this);
+
+    public void buttonOnClick(View v)
+    {
+        button.setText("STOP IT");
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_main);
-        Button button = new Button(this);
-        button=(Button)findViewById(R.id.correct_button);
-    }
 
+        button=(Button)findViewById(R.id.correct_button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                buttonOnClick(v);
+            }
+        });
+
+       // button.setOnClickListener(buttonListener);
+    }
+/*
     public void buttonOnClick()
     {
         clickedDay= new Intent(this, Activity2.class);
         startActivity(clickedDay);
     }
-
+*/
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
