@@ -25,7 +25,7 @@
             <intent-filter>
             <action android:name="projects.gabriel.calhacks.Activity2" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
+            <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
     </application>
