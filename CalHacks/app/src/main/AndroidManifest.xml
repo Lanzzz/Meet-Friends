@@ -19,7 +19,7 @@
             </intent-filter>
 
         </activity>
-        <activity android:label="@string/continue_button" android:name=""/>
+        <activity android:label="@string/continue_button" android:name="continue_button"/>
     </application>
 
 </manifest>
