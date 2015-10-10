@@ -33,9 +33,7 @@
         android:layout_alignLeft="@+id/editText"
         android:layout_alignStart="@+id/editText"
         android:clickable="true"
-<<<<<<< Updated upstream
         android:onClick="buttonOnClick" />
-=======
+
         android:onClick="&quot;buttonOnClick" />
->>>>>>> Stashed changes
 </RelativeLayout>
