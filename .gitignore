@@ -1,2 +1,5 @@
 .idea
 /.idea
+/app
+/.idea/gradle.xml
+/.idea/misc.xml
