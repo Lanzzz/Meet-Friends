@@ -18,7 +18,7 @@ public class Activity2 extends AppCompatActivity implements View.OnClickListener
         button.setOnClickListener(this);
     }
 
-    private void buttonClick()
+    public void buttonClick()
     {
         startActivity(new Intent("projects.gabriel.calhacks.Activity2)"));
     }
