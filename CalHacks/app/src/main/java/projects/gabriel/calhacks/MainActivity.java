@@ -21,18 +21,23 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        //final TextView firstTextView = (TextView) findViewById(R.id.textView);
+        /*final TextView firstTextView = (TextView) findViewById(R.id.textView);
 
         final Button firstButton = (Button) findViewById(R.id.button);
-        /*
+
         firstButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 firstTextView.setText("You Clicked");
             }
         });*/
-        startActivity(new Intent(getApplicationContext(), continue_button.class));
+        //startActivity(new Intent(getApplicationContext(), continue_button.class));
 
+    }
+    public void buttonOnClick(View v){
+
+        final Button firstButton = (Button) findViewById(R.id.button);
+        startActivity(new Intent(getApplicationContext(), continue_button.class));
     }
 
     @Override
