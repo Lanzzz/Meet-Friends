@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     public void buttonOnClick(View v){
 
         final Button firstButton = (Button) findViewById(R.id.button);
-        startActivity(new Intent(getApplicationContext(), Activity2.class));
+        startActivity(new Intent(this, Activity2.class));
     }
 
     @Override
