@@ -1,5 +1,6 @@
 package projects.gabriel.calhacks;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -12,27 +13,19 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
-
+public class MainActivity extends Activity {
+    Intent clickedDay;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        //setSupportActionBar(toolbar);
+        setContentView(R.layout.content_main);
+        Button button=(Button)findViewById(R.id.correct_button);
+    }
 
-        /*final TextView firstTextView = (TextView) findViewById(R.id.textView);
-
-        final Button firstButton = (Button) findViewById(R.id.button);
-
-        firstButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                firstTextView.setText("You Clicked");
-            }
-        });*/
-        //startActivity(new Intent(getApplicationContext(), continue_button.class));
-
+    public void buttonOnClick()
+    {
+        clickedDay= new Intent(this, Activity2.class);
+        startActivity(clickedDay);
     }
 
     @Override

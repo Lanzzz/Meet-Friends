@@ -15,7 +15,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textSize="32sp"
         android:text="@string/success"
-        android:id="@+id/correct_button"
+        android:id="@+id/TxtID"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
