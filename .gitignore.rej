@@ -1,0 +1,11 @@
+diff a/.gitignore b/.gitignore	(rejected hunks)
+@@ -1,5 +1,5 @@
+ .idea
+ /.idea
+ /app
+-/.idea/gradle.xml
+-/.idea/misc.xml
+\ No newline at end of file
++/CalHacks/.idea
++/CalHacks/app
+\ No newline at end of file
