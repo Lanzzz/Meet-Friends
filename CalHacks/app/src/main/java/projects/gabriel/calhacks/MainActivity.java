@@ -19,7 +19,8 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_main);
-        Button button=(Button)findViewById(R.id.correct_button);
+        Button button = new Button(this);
+        button=(Button)findViewById(R.id.correct_button);
     }
 
     public void buttonOnClick()

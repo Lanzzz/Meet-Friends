@@ -12,6 +12,7 @@
     tools:context=".MainActivity"
     tools:showIn="@layout/activity_main">
 
+
     <EditText android:text="Welcome! Let us Meet Friends" android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="@dimen/activity_horizontal_margin"
@@ -33,5 +34,5 @@
         android:layout_alignLeft="@+id/editText"
         android:layout_alignStart="@+id/editText"
         android:clickable="true"
-        android:onClick="buttonOnClick" />
+        android:onClick="buttonOnClick()" />
 </RelativeLayout>
