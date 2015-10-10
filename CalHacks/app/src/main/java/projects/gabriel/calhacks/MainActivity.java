@@ -34,11 +34,6 @@ public class MainActivity extends AppCompatActivity {
         //startActivity(new Intent(getApplicationContext(), continue_button.class));
 
     }
-    public void buttonOnClick(View v){
-
-        final Button firstButton = (Button) findViewById(R.id.button);
-        startActivity(new Intent(getApplicationContext(), Activity2.class));
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
