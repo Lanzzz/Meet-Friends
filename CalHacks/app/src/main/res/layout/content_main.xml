@@ -35,5 +35,4 @@
         android:clickable="true"
         android:onClick="buttonOnClick" />
 
-        android:onClick="&quot;buttonOnClick" />
 </RelativeLayout>

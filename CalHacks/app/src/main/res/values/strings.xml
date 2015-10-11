@@ -10,4 +10,6 @@
     <string name = "map">Map</string>
     <string name = "viewFriends">Friends List</string>
 
+    <string name = "Find_Friends">Find_Friends</string>
+    <string name = "ButtontoBlue">BlueTooth_and_Chat </string>
 </resources>
