@@ -37,11 +37,6 @@
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
-            android:name=".FriendsList"
-            android:label="@string/viewFriends"
-            android:theme="@style/AppTheme.NoActionBar" >
-        </activity>
-        <activity
             android:name=".ListOfFriends"
             android:label="@string/title_activity_list_of_friends"
             android:theme="@style/AppTheme.NoActionBar" >

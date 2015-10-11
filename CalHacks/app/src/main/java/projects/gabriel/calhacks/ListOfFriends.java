@@ -1,29 +1,28 @@
 package projects.gabriel.calhacks;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
+import android.widget.Button;
 
-public class ListOfFriends extends AppCompatActivity {
+import java.util.ArrayList;
 
-    @Override
+/**
+ * Created by gabriel on 10/11/2015.
+ */
+public class ListOfFriends extends AppCompatActivity{
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_of_friends);
+        setContentView(R.layout.activity_option_slide);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
     }
+
+    ArrayList<String> friends = new ArrayList<>();
+
+
+
 
 }
