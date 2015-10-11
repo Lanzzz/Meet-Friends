@@ -8,8 +8,9 @@
     <string name = "map">View Map</string>
     <string name = "viewFriends">Friends List</string>
     <string name = "team">Hackathon Credits</string>
-    <string name="title_activity_hackathon_credits">HackathonCredits</string>
-    <string name="title_activity_adding_friend">AddingFriend</string>
+    <string name = "title_activity_map">Title Activity Map</string>
+    <string name="title_activity_hackathon_credits">Hackathon Credits</string>
+    <string name="title_activity_adding_friend">Adding Friend</string>
     <string name="google_maps_key" templateMergeStrategy="preserve">AIzaSyD1YanzJS6qVukWBXWewQW0AGpdYAa7GnM </string>
 
 

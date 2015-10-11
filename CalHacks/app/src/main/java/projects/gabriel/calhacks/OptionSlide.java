@@ -1,6 +1,7 @@
 package projects.gabriel.calhacks;
 
 import android.content.Intent;
+
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -28,7 +29,7 @@ public class OptionSlide extends AppCompatActivity {
         public void buttonClick2(View v) // view map link
         {
                 final Button mapButton = (Button) findViewById(R.id.map);
-                startActivity(new Intent(this, OptionSlide.class));
+                startActivity(new Intent(this, map.class));
         }
 
         public void buttonClick3(View v) // view friend list
