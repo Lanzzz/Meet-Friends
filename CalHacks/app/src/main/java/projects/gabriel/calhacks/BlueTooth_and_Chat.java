@@ -2,23 +2,20 @@ package projects.gabriel.calhacks;
 
         //important generic API for bluetooth.
 //http://developer.android.com/guide/topics/connectivity/bluetooth.html
-import android.Manifest;
-import android.app.Activity;
+
 import android.bluetooth.*;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothServerSocket;
-import android.Manifest.permission;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.ParcelFileDescriptor;
 import android.widget.ArrayAdapter;
-
 import java.io.IOException;
 import java.util.Set;
 import java.util.UUID;
-import android.content.ActivityNotFoundException;
+
 
 import static android.support.v4.app.ActivityCompat.startActivityForResult;
 
@@ -26,15 +23,13 @@ import static android.support.v4.app.ActivityCompat.startActivityForResult;
  * Created by Landon on 10/10/2015.
  */
 
-
-
 public class BlueTooth_and_Chat {
 
     public static String NAME = "meet_friends";
     //universal identifier
     public static UUID MY_UUID = UUID.randomUUID();
 
-    public static String BLUETOOTH = permission.BLUETOOTH.toString();
+    //public static String BLUETOOTH = permission.BLUETOOTH.toString();
 
     //current users bluetooth object
     public static BluetoothAdapter myBTooth;
@@ -44,6 +39,7 @@ public class BlueTooth_and_Chat {
 
     //a remote bluetooth device
     BluetoothDevice yourBTD;
+
 
     BlueTooth_and_Chat() {
 
@@ -55,13 +51,15 @@ public class BlueTooth_and_Chat {
         }
         //only accept one connection at a time
         //needs to be interruptable
-        Thread t = new Thread( new Runnable( )
+        new Thread( new Runnable( )
         { public void run() { checkIfBlueToothEnabled();}});
 
-        Thread receiveInterrupt = new Thread( new Runnable( )
+        //Thread receiveInterrupt =
+                new Thread( new Runnable( )
         { public void run() { new ConnectThread(yourBTD);}});
 
-        Thread closeInterrupt = new Thread( new Runnable( )
+        //Thread closeInterrupt =
+                new Thread( new Runnable( )
         { public void run() { new AcceptThread();}});
 
     }
@@ -76,7 +74,7 @@ public class BlueTooth_and_Chat {
             Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
 
             //accessing incorrect method
-
+            //should access ACTIVITY class
             startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
         }
 
@@ -218,14 +216,4 @@ public class BlueTooth_and_Chat {
             } catch (IOException e) { }
         }
     }
-
-
-
-
-
-
-
 }
-
-
-
