@@ -29,7 +29,11 @@ public class OptionSlide extends AppCompatActivity {
         public void buttonClick2(View v) // view map link
         {
                 final Button mapButton = (Button) findViewById(R.id.map);
+<<<<<<< HEAD
                 //startActivity(new Intent(this, MapActivity.class));
+=======
+                startActivity(new Intent(this, MapsActivity.class));
+>>>>>>> origin/Map2.0
         }
 
         public void buttonClick3(View v) // view friend list
