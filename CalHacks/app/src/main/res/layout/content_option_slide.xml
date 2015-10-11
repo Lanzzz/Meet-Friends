@@ -10,7 +10,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="projects.gabriel.calhacks.OptionSlide">
+    tools:context="projects.gabriel.calhacks.OptionSlide"
+    android:background="@mipmap/android">
 
     <Button
         android:id="@+id/addContact"
@@ -23,7 +24,8 @@
         android:textSize="50sp"
         android:layout_centerHorizontal="true"
         android:gravity="center"
-        android:onClick="buttonClick1" />
+        android:onClick="buttonClick1"
+        android:background="#cac418" />
 
     <Button
         android:id="@+id/map"
@@ -36,7 +38,8 @@
         android:textSize="50sp"
         android:gravity="center"
         android:layout_centerHorizontal="true"
-        android:onClick="buttonClick2" />
+        android:onClick="buttonClick2"
+        android:background="#cac418" />
 
     <Button
         android:id="@+id/viewFriends"
@@ -49,7 +52,8 @@
         android:clickable="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="265dp"
-        android:onClick="buttonClick3" />
+        android:onClick="buttonClick3"
+        android:background="#cac418" />
 
     <Button
         android:layout_width="wrap_content"
@@ -63,7 +67,8 @@
         android:gravity="center"
         android:layout_marginTop="50dp"
         android:layout_below="@+id/viewFriends"
-        android:onClick="buttonClick4" />
+        android:onClick="buttonClick4"
+        android:background="#cac418" />
 
 
 </RelativeLayout>

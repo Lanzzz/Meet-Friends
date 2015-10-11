@@ -41,7 +41,7 @@ public class OptionSlide extends AppCompatActivity {
         public void buttonClick4(View v) // view Hackathon Credits
         {
                 final Button creditsButton = (Button) findViewById(R.id.team);
-                startActivity(new Intent(this, Hackathon_Credits.class));
+                startActivity(new Intent(this, HackathonCredits.class));
         }
 
 }
