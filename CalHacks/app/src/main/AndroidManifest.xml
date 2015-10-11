@@ -19,13 +19,18 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Activity2"
-            android:label="@string/title_activity_2"
+            android:name=".OptionSlide"
+            android:label="@string/title_activity_option_slide"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
-            android:name=".OptionSlide"
-            android:label="@string/title_activity_option_slide"
+            android:name=".HackathonCredits"
+            android:label="@string/title_activity_hackathon_credits"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".AddingFriend"
+            android:label="@string/title_activity_adding_friend"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
     </application>
