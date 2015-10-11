@@ -1,0 +1,15 @@
+<resources>
+    <string name = "app_name">Cal Hacks</string>
+    <string name = "action_settings">Settings</string>
+    <string name = "continue_button">Continue</string>
+    <string name = "success">You are Successful
+        Please Continue</string>
+    <string name = "title_activity_2">MainActivity2</string>
+    <string name = "title_activity_option_slide">OptionSlide</string>
+    <string name = "addContacts">Add Contacts</string>
+    <string name = "map">Map</string>
+    <string name = "viewFriends">Friends List</string>
+
+    <string name = "Find_Friends">Find_Friends</string>
+    <string name = "ButtontoBlue">BlueTooth_and_Chat </string>
+</resources>
