@@ -12,13 +12,16 @@
     tools:context=".MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <TextView android:text="Welcome! Let us Meet Friends" android:layout_width="wrap_content"
+    <TextView
+        android:text="Chat your friend"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="@dimen/activity_horizontal_margin"
         android:layout_marginTop="47dp"
-        android:id="@+id/editText"
+        android:id="@+id/chat"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        />
 
     <Button
         android:layout_width="wrap_content"
