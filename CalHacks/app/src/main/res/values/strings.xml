@@ -9,9 +9,11 @@
     <string name = "viewFriends">Friends List</string>
     <string name = "team">Hackathon Credits</string>
     <string name = "title_activity_map">Title Activity Map</string>
-    <string name="title_activity_hackathon_credits">Hackathon Credits</string>
-    <string name="title_activity_adding_friend">Adding Friend</string>
-    <string name="google_maps_key" templateMergeStrategy="preserve">AIzaSyD1YanzJS6qVukWBXWewQW0AGpdYAa7GnM </string>
+    <string name = "title_activity_hackathon_credits">Hackathon Credits</string>
+    <string name = "title_activity_adding_friend">Adding Friend</string>
+    <string name = "google_maps_key" templateMergeStrategy="preserve">AIzaSyD1YanzJS6qVukWBXWewQW0AGpdYAa7GnM </string>
+    <string name = "add_entry">AddEntry</string>
+    <string name="title_activity_list_of_friends">ListOfFriends</string>
 
 
 

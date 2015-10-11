@@ -28,7 +28,7 @@
         android:background="#cac418" />
 
     <Button
-        android:id="@+id/map"
+        android:id="@+id/MapsActivity"
         android:text="@string/map"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="wrap_content"

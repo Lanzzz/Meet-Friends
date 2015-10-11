@@ -14,7 +14,7 @@ public class HackathonCredits extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hackathon_credits);
 
-        
+
     }
 
 }
