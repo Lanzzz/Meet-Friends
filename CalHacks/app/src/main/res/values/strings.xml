@@ -1,0 +1,18 @@
+
+<resources>
+    <string name = "app_name">Cal Hacks</string>
+    <string name = "continue_button">Continue</string>
+
+    <string name = "title_activity_option_slide">OptionSlide</string>
+    <string name = "addContacts">Add Contacts</string>
+    <string name = "map">View Map</string>
+    <string name = "viewFriends">Friends List</string>
+    <string name = "team">Hackathon Credits</string>
+    <string name="title_activity_hackathon_credits">HackathonCredits</string>
+    <string name="title_activity_adding_friend">AddingFriend</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve">AIzaSyD1YanzJS6qVukWBXWewQW0AGpdYAa7GnM </string>
+
+
+
+</resources>
+

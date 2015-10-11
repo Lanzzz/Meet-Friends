@@ -16,9 +16,10 @@
         android:textSize="32sp"
         android:text="@string/success"
         android:id="@+id/textView2"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="192dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"/>
 </RelativeLayout>

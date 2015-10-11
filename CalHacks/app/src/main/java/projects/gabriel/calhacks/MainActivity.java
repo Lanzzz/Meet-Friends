@@ -31,13 +31,13 @@ public class MainActivity extends AppCompatActivity {
                 firstTextView.setText("You Clicked");
             }
         });*/
-        //startActivity(new Intent(getApplicationContext(), continue_button.class));
+
 
     }
     public void buttonOnClick(View v){
 
         final Button firstButton = (Button) findViewById(R.id.button);
-        startActivity(new Intent(this, Activity2.class));
+        startActivity(new Intent(this, OptionSlide.class));
     }
 
     @Override

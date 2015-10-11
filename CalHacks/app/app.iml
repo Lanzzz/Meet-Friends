@@ -94,7 +94,10 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="design-23.0.1" level="project" />
     <orderEntry type="library" exported="" name="appcompat-v7-23.0.1" level="project" />
+<<<<<<< HEAD
     <orderEntry type="library" exported="" name="play-services-6.5.87" level="project" />
+=======
+>>>>>>> ff877e4c4ff7190d3a243cdb9e1b490e125780f3
     <orderEntry type="library" exported="" name="support-v4-23.0.1" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-23.0.1" level="project" />
   </component>
