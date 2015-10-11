@@ -3,6 +3,7 @@ package projects.gabriel.calhacks;
         //important generic API for bluetooth.
 //http://developer.android.com/guide/topics/connectivity/bluetooth.html
 import android.Manifest;
+import android.app.Activity;
 import android.bluetooth.*;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothServerSocket;
@@ -10,59 +11,72 @@ import android.Manifest.permission;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-
-import android.app.*;
 import android.content.IntentFilter;
-import android.content.Context;
+import android.os.ParcelFileDescriptor;
 import android.widget.ArrayAdapter;
 
-
+import java.io.IOException;
 import java.util.Set;
+import java.util.UUID;
+import android.content.ActivityNotFoundException;
 
+import static android.support.v4.app.ActivityCompat.startActivityForResult;
 
 /**
  * Created by Landon on 10/10/2015.
  */
 
 
+
 public class BlueTooth_and_Chat {
 
-    public static String BLUETOOTH = permission.BLUETOOTH;
+    public static String NAME = "meet_friends";
+    //universal identifier
+    public static UUID MY_UUID = UUID.randomUUID();
+
+    public static String BLUETOOTH = permission.BLUETOOTH.toString();
 
     //current users bluetooth object
-    BluetoothAdapter myBTooth;
+    public static BluetoothAdapter myBTooth;
 
     //bts is a single healthy connection
-    BluetoothSocket bts;
+    public BluetoothSocket bts;
 
+    //a remote bluetooth device
+    BluetoothDevice yourBTD;
 
     BlueTooth_and_Chat() {
+
+        ParcelFileDescriptor pfd;
         myBTooth = BluetoothAdapter.getDefaultAdapter();
         if (myBTooth == null) {
             // Device does not support Bluetooth
             return;
         }
-
         //only accept one connection at a time
         //needs to be interruptable
         Thread t = new Thread( new Runnable( )
         { public void run() { checkIfBlueToothEnabled();}});
 
         Thread receiveInterrupt = new Thread( new Runnable( )
-        { public void run() { bts.connect();}});
+        { public void run() { new ConnectThread(yourBTD);}});
 
         Thread closeInterrupt = new Thread( new Runnable( )
-        { public void run() { bts.close();}});
+        { public void run() { new AcceptThread();}});
 
     }
 
+
     public void checkIfBlueToothEnabled() {
-        int REQUEST_ENABLE_BT;
+            int REQUEST_ENABLE_BT =1;
 
         //check if bluetooth is on
-        //i know this is broken
+
         if (!myBTooth.isEnabled()) {
             Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+
+            //accessing incorrect method
+
             startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
         }
 
@@ -81,7 +95,7 @@ public class BlueTooth_and_Chat {
     ArrayAdapter mArrayAdapter;
 
     public void checkPairedDevices() {
-        Set<BluetoothDevice> pairedDevices = myBTooth.getBondedDevices();
+        Set<BluetoothDevice> pairedDevices =myBTooth .getBondedDevices();
 
     // If there are paired devices, show each name
         if (pairedDevices.size() > 0) {
@@ -111,6 +125,107 @@ public class BlueTooth_and_Chat {
 
     // Register the BroadcastReceiver
     IntentFilter filter = new IntentFilter(BluetoothDevice.ACTION_FOUND);
-    Intent intent = registerReceiver(mReceiver, filter); // Don't forget to unregister during onDestroy
+    Intent intent = Context.registerReceiver(mReceiver, filter); // Don't forget to unregister during onDestroy
+
+
+
+
+    private class ConnectThread extends Thread {
+        private final BluetoothSocket mmSocket;
+        private final BluetoothDevice mmDevice;
+
+        public ConnectThread(BluetoothDevice device) {
+            // Use a temporary object that is later assigned to mmSocket,
+            // because mmSocket is final
+            BluetoothSocket tmp = null;
+            mmDevice = device;
+
+            // Get a BluetoothSocket to connect with the given BluetoothDevice
+            try {
+                // MY_UUID is the app's UUID string, also used by the server code
+                tmp = device.createRfcommSocketToServiceRecord(MY_UUID);
+            } catch (IOException e) { }
+            mmSocket = tmp;
+        }
+
+        public void run() {
+            // Cancel discovery because it will slow down the connection
+            myBTooth.cancelDiscovery();
+
+            try {
+                // Connect the device through the socket. This will block
+                // until it succeeds or throws an exception
+                mmSocket.connect();
+            } catch (IOException connectException) {
+                // Unable to connect; close the socket and get out
+                try {
+                    mmSocket.close();
+                } catch (IOException closeException) { }
+                return;
+            }
+
+            // Do work to manage the connection (in a separate thread)
+            manageConnectedSocket(mmSocket);
+        }
+
+        /** Will cancel an in-progress connection, and close the socket */
+        public void cancel() {
+            try {
+                mmSocket.close();
+            } catch (IOException e) { }
+        }
+    }
+
+
+
+    private class AcceptThread extends Thread {
+        private final BluetoothServerSocket mmServerSocket;
+
+        public AcceptThread() {
+            // Use a temporary object that is later assigned to mmServerSocket,
+            // because mmServerSocket is final
+            BluetoothServerSocket tmp = null;
+            try {
+                // MY_UUID is the app's UUID string, also used by the client code
+                tmp = myBTooth.listenUsingRfcommWithServiceRecord(NAME, MY_UUID);
+            } catch (IOException e) { }
+            mmServerSocket = tmp;
+        }
+
+        public void run() {
+            BluetoothSocket socket = null;
+            // Keep listening until exception occurs or a socket is returned
+            while (true) {
+                try {
+                    socket = mmServerSocket.accept();
+                } catch (IOException e) {
+                    break;
+                }
+                // If a connection was accepted
+                if (socket != null) {
+                    // Do work to manage the connection (in a separate thread)
+                    manageConnectedSocket(socket);
+                    mmServerSocket.close();
+                    break;
+                }
+            }
+        }
+
+        /** Will cancel the listening socket, and cause the thread to finish */
+        public void cancel() {
+            try {
+                mmServerSocket.close();
+            } catch (IOException e) { }
+        }
+    }
+
+
+
+
+
+
 
 }
+
+
+
