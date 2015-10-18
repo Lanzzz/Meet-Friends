@@ -1,11 +1,14 @@
 package projects.gabriel.calhacks;
 
+import android.content.Intent;
+
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 
 public class OptionSlide extends AppCompatActivity {
 
@@ -15,15 +18,34 @@ public class OptionSlide extends AppCompatActivity {
         setContentView(R.layout.activity_option_slide);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
     }
+
+        public void buttonClick1(View v) // add Contact link
+        {
+           final Button addButton = (Button) findViewById(R.id.addContact);
+           startActivity(new Intent(this, OptionSlide.class));
+        }
+
+        public void buttonClick2(View v) // view map link
+        {
+                final Button mapButton = (Button) findViewById(R.id.map);
+<<<<<<< HEAD
+                //startActivity(new Intent(this, MapActivity.class));
+=======
+                startActivity(new Intent(this, MapsActivity.class));
+>>>>>>> origin/Map2.0
+        }
+
+        public void buttonClick3(View v) // view friend list
+        {
+                final Button friendButton = (Button) findViewById(R.id.viewFriends);
+                startActivity(new Intent(this, OptionSlide.class));
+        }
+
+        public void buttonClick4(View v) // view Hackathon Credits
+        {
+                final Button creditsButton = (Button) findViewById(R.id.team);
+                startActivity(new Intent(this, HackathonCredits.class));
+        }
 
 }
